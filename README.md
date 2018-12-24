@@ -1,5 +1,5 @@
 # NgxBilly
-
+基于 Angular 的中后台脚手架
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
 ## Development server
