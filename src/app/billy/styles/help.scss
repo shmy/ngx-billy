@@ -1,0 +1,15 @@
+.full {
+  height: 100%;
+  width: 100%;
+}
+.scroll {
+  overflow: auto;
+}
+.scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.scroll-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
