@@ -1,0 +1,24 @@
+<ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="menuSrv.isCollapsed">
+  <ng-container *ngTemplateOutlet="menuTpl; context: {menus: menuSrv.menus, level: 0}"></ng-container>
+
+  <ng-template #menuTpl let-menus="menus" let-level="level">
+    <ng-container *ngFor="let menu of menus">
+      <!--https://github.com/NG-ZORRO/ng-zorro-antd/issues/52-->
+      <li nz-menu-item *ngIf="!menu.children" routerLinkActive #rla="routerLinkActive" [nzSelected]="rla.isActive">
+        <a [routerLink]="menu.path" [style.paddingLeft]="level * subItemIndent + 'px'" title>
+          <i nz-icon type="appstore"></i>
+          <span>{{menu.name}}</span>
+        </a>
+      </li>
+      <li nz-submenu *ngIf="menu.children" routerLinkActive #rla="routerLinkActive" [nzOpen]="rla.isActive">
+        <span [routerLink]="menu.path" [style.paddingLeft]="level * subItemIndent + 'px'" title>
+          <i nz-icon type="appstore"></i>
+          <span>{{menu.name}}</span>
+        </span>
+        <ul>
+          <ng-container *ngTemplateOutlet="menuTpl; context: {menus: menu.children, level: level + 1}"></ng-container>
+        </ul>
+      </li>
+    </ng-container>
+  </ng-template>
+</ul>

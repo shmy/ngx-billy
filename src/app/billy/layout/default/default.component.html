@@ -1,0 +1,25 @@
+<nz-layout class="full">
+  <nz-header class="no-padding" flex="dir:left cross:center">
+    <div class="logo" [class.is-collapsed]="menuSrv.isCollapsed"></div>
+    <div (click)="toggleCollapsed()" class="trigger">
+      <i nz-icon [type]="menuSrv.isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+    </div>
+
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;">
+      <li nz-menu-item>nav 1</li>
+      <li nz-menu-item>nav 2</li>
+      <li nz-menu-item>nav 3</li>
+    </ul>
+  </nz-header>
+  <nz-layout>
+    <nz-sider [nzWidth]="200" [(nzCollapsed)]="menuSrv.isCollapsed" class="scroll-y">
+        <nb-sidebar-item></nb-sidebar-item>
+    </nz-sider>
+    <nz-layout style="padding: 20px; box-sizing: border-box">
+      <router-outlet></router-outlet>
+    </nz-layout>
+  </nz-layout>
+</nz-layout>
+<ng-template #trigger>
+  <i nz-icon type="up"></i>
+</ng-template>
