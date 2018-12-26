@@ -1,0 +1,13 @@
+<nz-tabset #nts [nzSize]="'small'" [nzAnimated]="false" [nzTabPosition]="'top'" [nzType]="'card'">
+  <nz-tab *ngFor="let tab of pageSrv.pages; let index = index;" [nzTitle]="titleTemplate" (nzClick)="handleItemClick(tab.path)">
+    <ng-template #titleTemplate>
+      <div>
+        <span>{{ tab.name }}</span>
+        <span [hidden]="index !== nts.nzSelectedIndex">
+          <i nz-icon type="reload" class="ant-tabs-close-x" (click)="closeTab(tab)"></i>
+          <i nz-icon type="close" class="ant-tabs-close-x" (click)="closeTab(tab)"></i>
+        </span>
+      </div>
+    </ng-template>
+  </nz-tab>
+</nz-tabset>

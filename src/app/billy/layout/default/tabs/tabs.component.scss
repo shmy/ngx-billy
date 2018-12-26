@@ -1,0 +1,14 @@
+:host {
+  //刺穿组件
+  ::ng-deep {
+    .ant-tabs-bar {
+      margin: 0 !important;
+      background-color: #666 !important;
+    }
+    .ant-tabs-tab {
+      border-radius: 0 !important;
+      //background-color: #666 !important;
+      //border-color: transparent !important;
+    }
+  }
+}

@@ -2,11 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {MenuService} from '../../../service/menu.service';
 
 @Component({
-  selector: 'nb-sidebar-item',
-  templateUrl: './sidebar-item.component.html',
-  styleUrls: ['./sidebar-item.component.scss'],
+  selector: 'nb-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.scss'],
 })
-export class SidebarItemComponent implements OnInit {
+export class SidebarComponent implements OnInit {
   subItemIndent = 12;
   constructor(
     public menuSrv: MenuService,

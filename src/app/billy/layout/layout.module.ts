@@ -1,12 +1,14 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {NgZorroAntdModule, NZ_I18N, NzMenuModule, zh_CN} from 'ng-zorro-antd';
-import { SidebarItemComponent } from './default/sidebar-item/sidebar-item.component';
+import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
+import { SidebarComponent } from './default/sidebar/sidebar.component';
 import {DefaultComponent} from './default/default.component';
 import {RouterModule} from '@angular/router';
+import { TabsComponent } from './default/tabs/tabs.component';
 const COMPONENTS = [
   DefaultComponent,
-  SidebarItemComponent,
+  SidebarComponent,
+  TabsComponent,
 ];
 const IMPORTS = [
   RouterModule,

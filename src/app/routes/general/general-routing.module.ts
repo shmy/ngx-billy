@@ -10,10 +10,16 @@ const routes: Routes = [
   {
     path: 'button',
     component: ButtonComponent,
+    data: {
+      title: '按钮',
+    }
   },
   {
     path: 'icon',
     component: IconComponent,
+    data: {
+      title: '图标',
+    }
   }
 ];
 @NgModule({

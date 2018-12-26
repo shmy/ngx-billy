@@ -13,10 +13,13 @@
   </nz-header>
   <nz-layout>
     <nz-sider [nzWidth]="200" [(nzCollapsed)]="menuSrv.isCollapsed" class="scroll-y">
-        <nb-sidebar-item></nb-sidebar-item>
+        <nb-sidebar></nb-sidebar>
     </nz-sider>
-    <nz-layout style="padding: 20px; box-sizing: border-box">
-      <router-outlet></router-outlet>
+    <nz-layout flex="dir:top">
+      <nb-tabs></nb-tabs>
+      <nz-layout flex-box="1">
+        <router-outlet></router-outlet>
+      </nz-layout>
     </nz-layout>
   </nz-layout>
 </nz-layout>
