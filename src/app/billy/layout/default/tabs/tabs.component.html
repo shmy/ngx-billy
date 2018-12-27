@@ -1,6 +1,13 @@
-<ul class="tabs">
-  <li class="tab-item" routerLinkActive="active" #rla="routerLinkActive" [routerLink]="tab.url" *ngFor="let tab of pageSrv.pages; let index = index;">
-    <span title>{{ tab.title }}</span>
-    <i [hidden]="pageSrv.size === 1" nz-icon (click)="handleClose($event, index, rla.isActive)" type="close" class="option-btn close-btn"></i>
-  </li>
-</ul>
+<div flex="dir:left">
+  <i class="option-btn" (click)="handleOffsetLeft()" nz-icon type="double-left" theme="outline"></i>
+  <ul flex-box="1" class="tabs" #tabs>
+    <li class="tab-item" routerLinkActive="active" #rla="routerLinkActive" [routerLink]="tab.url"
+        *ngFor="let tab of pageSrv.pages; let index = index;">
+      <div class="tab-item-title">
+        <span title>{{ tab.title }}</span>
+      </div>
+      <i nz-icon (click)="handleClose($event, index, rla.isActive)" type="close" [class.not-allowed]="pageSrv.size === 1" class="tab-close-btn"></i>
+    </li>
+  </ul>
+  <i class="option-btn" (click)="handleOffsetRight()" nz-icon type="double-right" theme="outline"></i>
+</div>

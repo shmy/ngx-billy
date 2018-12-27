@@ -11,8 +11,16 @@
   //    //border-color: transparent !important;
   //  }
   //}
-
+  .option-btn {
+    width: 40px;
+    height: 35px;
+    line-height: 40px;
+    cursor: pointer;
+    background-color: #0C0C0D;
+    color: #fff;
+  }
   .tabs {
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -21,26 +29,39 @@
     overflow: hidden;
     white-space: nowrap;
     width: 100%;
-    background-color: #333333;
-    color: #CECECE;
+    background-color: #0C0C0D;
+    color: #A6A6A6;
     user-select: none;
+
     .tab-item {
       display: inline-block;
-      padding: 0 20px;
       cursor: pointer;
+      padding: 0 0 0 20px;
       transition: .1s background-color, .1s color;
       &.active, &:hover {
-        background-color: #3C81F0;
+        background-color: #323234;
         color: #fff;
-        font-weight: bold;
       }
-      .option-btn {
-        font-size: 12px;
-        margin-left: 15px;
+      .tab-close-btn {
+        font-size: 14px;
+        float: left;
+        width: 40px;
+        height: 35px;
+        line-height: 40px;
+        &.not-allowed {
+          cursor: not-allowed;
+        }
       }
-      //.close-btn {
-      //  margin-left: 10px;
-      //}
+      .tab-item-title {
+        min-width: 60px;
+        max-width: 120px;
+        float: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+      }
+
     }
   }
 }

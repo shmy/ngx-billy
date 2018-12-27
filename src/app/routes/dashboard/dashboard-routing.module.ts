@@ -12,7 +12,7 @@ const routes: Routes = [
     path: 'v1',
     component: V1Component,
     data: {
-      title: '控制台',
+      title: '控制台控制台控制台控制台',
       keep: true,
     }
   }
