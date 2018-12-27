@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {V1Component} from './v1/v1.component';
+import {BillyModule} from '../../billy/billy.module';
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
     component: V1Component,
     data: {
       title: '控制台',
+      keep: true,
     }
   }
 ];
@@ -20,7 +22,7 @@ const routes: Routes = [
   declarations: [
     V1Component,
   ],
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes), BillyModule],
   exports: [RouterModule]
 })
 export class DashboardRoutingModule { }

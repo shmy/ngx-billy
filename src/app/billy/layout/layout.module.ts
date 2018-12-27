@@ -5,6 +5,9 @@ import { SidebarComponent } from './default/sidebar/sidebar.component';
 import {DefaultComponent} from './default/default.component';
 import {RouterModule} from '@angular/router';
 import { TabsComponent } from './default/tabs/tabs.component';
+import {LoadingBarHttpClientModule} from '@ngx-loading-bar/http-client';
+import {LoadingBarRouterModule} from '@ngx-loading-bar/router';
+
 const COMPONENTS = [
   DefaultComponent,
   SidebarComponent,
@@ -14,6 +17,8 @@ const IMPORTS = [
   RouterModule,
   CommonModule,
   NgZorroAntdModule,
+  LoadingBarHttpClientModule,
+  LoadingBarRouterModule,
 ];
 @NgModule({
   declarations: [

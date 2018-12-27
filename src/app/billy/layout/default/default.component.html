@@ -4,12 +4,6 @@
     <div (click)="toggleCollapsed()" class="trigger">
       <i nz-icon [type]="menuSrv.isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
     </div>
-
-    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;">
-      <li nz-menu-item>nav 1</li>
-      <li nz-menu-item>nav 2</li>
-      <li nz-menu-item>nav 3</li>
-    </ul>
   </nz-header>
   <nz-layout>
     <nz-sider [nzWidth]="200" [(nzCollapsed)]="menuSrv.isCollapsed" class="scroll-y">
@@ -26,3 +20,4 @@
 <ng-template #trigger>
   <i nz-icon type="up"></i>
 </ng-template>
+<ngx-loading-bar color="#F91628" [includeSpinner]="false"></ngx-loading-bar>

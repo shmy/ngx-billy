@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, ActivationEnd, ActivationStart, NavigationStart, Router} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 import {PageService} from '../../../service/page.service';
 
 @Component({
@@ -9,15 +9,16 @@ import {PageService} from '../../../service/page.service';
 })
 export class TabsComponent implements OnInit {
   constructor(
-    private router: Router,
     public pageSrv: PageService,
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
   }
 
-  handleItemClick(path: string) {
-    this.router.navigateByUrl(path);
+  handleClose(e: MouseEvent, index: number, isActive: boolean) {
+    e.stopPropagation();
+    this.pageSrv.removePage(index, isActive);
   }
 
 }

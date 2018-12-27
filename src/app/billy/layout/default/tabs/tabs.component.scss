@@ -1,14 +1,46 @@
 :host {
   //刺穿组件
-  ::ng-deep {
-    .ant-tabs-bar {
-      margin: 0 !important;
-      background-color: #666 !important;
-    }
-    .ant-tabs-tab {
-      border-radius: 0 !important;
-      //background-color: #666 !important;
-      //border-color: transparent !important;
+  //::ng-deep {
+  //  .ant-tabs-bar {
+  //    margin: 0 !important;
+  //    background-color: #666 !important;
+  //  }
+  //  .ant-tabs-tab {
+  //    border-radius: 0 !important;
+  //    //background-color: #666 !important;
+  //    //border-color: transparent !important;
+  //  }
+  //}
+
+  .tabs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    background-color: #333333;
+    color: #CECECE;
+    user-select: none;
+    .tab-item {
+      display: inline-block;
+      padding: 0 20px;
+      cursor: pointer;
+      transition: .1s background-color, .1s color;
+      &.active, &:hover {
+        background-color: #3C81F0;
+        color: #fff;
+        font-weight: bold;
+      }
+      .option-btn {
+        font-size: 12px;
+        margin-left: 15px;
+      }
+      //.close-btn {
+      //  margin-left: 10px;
+      //}
     }
   }
 }
